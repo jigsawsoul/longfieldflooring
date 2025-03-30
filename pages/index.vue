@@ -220,6 +220,27 @@ const closeModal = () => {
   isModalOpen.value = false
 }
 
+const testimonials = [
+  {
+    name: 'Sarah Johnson',
+    location: 'Residential Client',
+    content: 'The team at Longfield Flooring did an exceptional job installing hardwood floors in our home. Their attention to detail and professionalism was outstanding.',
+    project: 'Hardwood Floor Installation'
+  },
+  {
+    name: 'Michael Chen',
+    location: 'Commercial Client',
+    content: 'We hired Longfield Flooring for our office renovation, and they exceeded our expectations. The project was completed on time and within budget.',
+    project: 'Commercial Office Renovation'
+  },
+  {
+    name: 'Emily Rodriguez',
+    location: 'Residential Client',
+    content: 'The quality of work and customer service was excellent. They helped us choose the perfect flooring for our kitchen renovation.',
+    project: 'Kitchen Tile Installation'
+  }
+]
+
 // SEO Meta Tags
 useHead({
   title: 'Longfield Flooring - Expert Flooring Services in Kent',
@@ -388,27 +409,6 @@ useHead({
     }
   ]
 })
-
-const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    location: 'Residential Client',
-    content: 'The team at Longfield Flooring did an exceptional job installing hardwood floors in our home. Their attention to detail and professionalism was outstanding.',
-    project: 'Hardwood Floor Installation'
-  },
-  {
-    name: 'Michael Chen',
-    location: 'Commercial Client',
-    content: 'We hired Longfield Flooring for our office renovation, and they exceeded our expectations. The project was completed on time and within budget.',
-    project: 'Commercial Office Renovation'
-  },
-  {
-    name: 'Emily Rodriguez',
-    location: 'Residential Client',
-    content: 'The quality of work and customer service was excellent. They helped us choose the perfect flooring for our kitchen renovation.',
-    project: 'Kitchen Tile Installation'
-  }
-]
 
 const projects = [
   {
