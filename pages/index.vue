@@ -401,7 +401,8 @@ const testimonialsWithSchema = testimonials.map((testimonial, index) => ({
     },
     telephone: '07807613063',
     email: 'info@longfieldflooring.co.uk',
-    url: 'https://longfieldflooring.co.uk'
+    url: 'https://longfieldflooring.co.uk',
+    priceRange: '££'
   }
 }))
 
