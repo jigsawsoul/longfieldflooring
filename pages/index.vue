@@ -297,8 +297,10 @@ const structuredData = {
   description: 'Professional flooring installation, repair, and maintenance services in Kent. Specialists in carpet fitting, vinyl, laminate, LVT, and subfloor preparation.',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '26 Ruggles Close',
     addressLocality: 'High Halstow',
     addressRegion: 'Kent',
+    postalCode: 'ME3 8RU',
     addressCountry: 'GB'
   },
   geo: {
@@ -374,7 +376,6 @@ useHead({
 
 // Testimonials with structured data
 const testimonialsWithSchema = testimonials.map((testimonial, index) => ({
-  ...testimonial,
   '@type': 'Review',
   reviewRating: {
     '@type': 'Rating',
@@ -387,8 +388,20 @@ const testimonialsWithSchema = testimonials.map((testimonial, index) => ({
   },
   reviewBody: testimonial.content,
   itemReviewed: {
-    '@type': 'Service',
-    name: testimonial.project
+    '@type': 'LocalBusiness',
+    name: 'Longfield Flooring',
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&auto=format&fit=crop&q=60',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '26 Ruggles Close',
+      addressLocality: 'High Halstow',
+      addressRegion: 'Kent',
+      postalCode: 'ME3 8RU',
+      addressCountry: 'GB'
+    },
+    telephone: '07807613063',
+    email: 'info@longfieldflooring.co.uk',
+    url: 'https://longfieldflooring.co.uk'
   }
 }))
 
