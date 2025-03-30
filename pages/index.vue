@@ -5,7 +5,7 @@
       <div class="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&auto=format&fit=crop&q=60"
-          alt="Beautiful flooring"
+          alt="Beautiful flooring installation by Longfield Flooring in Kent"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -219,6 +219,175 @@ const openModal = (index) => {
 const closeModal = () => {
   isModalOpen.value = false
 }
+
+// SEO Meta Tags
+useHead({
+  title: 'Longfield Flooring - Expert Flooring Services in Kent',
+  meta: [
+    {
+      name: 'description',
+      content: 'Professional flooring installation, repair, and maintenance services in Kent. Specialists in carpet fitting, vinyl, laminate, LVT, and subfloor preparation for both residential and commercial properties.'
+    },
+    {
+      name: 'keywords',
+      content: 'flooring kent, carpet fitting kent, vinyl flooring, laminate flooring, LVT installation, subfloor preparation, commercial flooring, residential flooring'
+    },
+    {
+      property: 'og:title',
+      content: 'Longfield Flooring - Expert Flooring Services in Kent'
+    },
+    {
+      property: 'og:description',
+      content: 'Professional flooring installation, repair, and maintenance services in Kent. Specialists in carpet fitting, vinyl, laminate, LVT, and subfloor preparation.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&auto=format&fit=crop&q=60'
+    },
+    {
+      property: 'og:url',
+      content: 'https://longfieldflooring.com'
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Longfield Flooring - Expert Flooring Services in Kent'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Professional flooring installation, repair, and maintenance services in Kent. Specialists in carpet fitting, vinyl, laminate, LVT, and subfloor preparation.'
+    },
+    {
+      name: 'twitter:image',
+      content: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&auto=format&fit=crop&q=60'
+    }
+  ]
+})
+
+// Structured Data
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Longfield Flooring',
+  image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&auto=format&fit=crop&q=60',
+  description: 'Professional flooring installation, repair, and maintenance services in Kent. Specialists in carpet fitting, vinyl, laminate, LVT, and subfloor preparation.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'High Halstow',
+    addressRegion: 'Kent',
+    addressCountry: 'GB'
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '51.44970671272006',
+    longitude: '0.5663158101458687'
+  },
+  url: 'https://longfieldflooring.com',
+  telephone: '07807613063',
+  email: 'info@longfieldflooring.com',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '17:00'
+    }
+  ],
+  priceRange: '££',
+  areaServed: 'Kent',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Flooring Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Carpet Fitting'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Vinyl Installation'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Laminate Flooring'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'LVT Installation'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Subfloor Preparation'
+        }
+      }
+    ]
+  }
+}
+
+// Add structured data to the page
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify(structuredData)
+    }
+  ]
+})
+
+// Testimonials with structured data
+const testimonialsWithSchema = testimonials.map((testimonial, index) => ({
+  ...testimonial,
+  '@type': 'Review',
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: '5',
+    bestRating: '5'
+  },
+  author: {
+    '@type': 'Person',
+    name: testimonial.name
+  },
+  reviewBody: testimonial.content,
+  itemReviewed: {
+    '@type': 'Service',
+    name: testimonial.project
+  }
+}))
+
+// Add testimonials structured data
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: testimonialsWithSchema.map((testimonial, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: testimonial
+        }))
+      })
+    }
+  ]
+})
 
 const testimonials = [
   {
