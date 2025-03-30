@@ -69,8 +69,7 @@
                   <h3 class="text-lg font-medium text-gray-900">Business Hours</h3>
                   <p class="mt-1 text-gray-600">
                     Monday - Friday: 7:00 AM - 5:00 PM<br />
-                    Saturday: Closed<br />
-                    Sunday: Closed
+                    Saturday & Sunday: Closed
                   </p>
                 </div>
               </div>

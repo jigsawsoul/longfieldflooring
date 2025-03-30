@@ -33,12 +33,15 @@
         </div>
       </div>
       <!-- Mobile menu -->
-      <div v-show="isMenuOpen" class="md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <NuxtLink to="/" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Home</NuxtLink>
-          <NuxtLink to="/gallery" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Gallery</NuxtLink>
-          <NuxtLink to="/testimonials" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Testimonials</NuxtLink>
-          <NuxtLink to="/contact" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Contact</NuxtLink>
+      <div v-if="isMenuOpen" class="absolute top-16 left-0 right-0 bg-white shadow-lg rounded-b-lg">
+        <div class="px-4 py-2">
+          <NuxtLink to="/" class="block px-3 py-2 text-gray-600 hover:text-gray-900" @click="isMenuOpen = false">Home</NuxtLink>
+          <NuxtLink to="/gallery" class="block px-3 py-2 text-gray-600 hover:text-gray-900" @click="isMenuOpen = false">Gallery</NuxtLink>
+          <NuxtLink to="/testimonials" class="block px-3 py-2 text-gray-600 hover:text-gray-900" @click="isMenuOpen = false">Testimonials</NuxtLink>
+          <NuxtLink to="/contact" class="block px-3 py-2 text-gray-600 hover:text-gray-900" @click="isMenuOpen = false">Contact</NuxtLink>
+          <a href="https://www.facebook.com/longfieldflooringltd/" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 text-gray-600 hover:text-gray-900" @click="isMenuOpen = false">
+            Facebook
+          </a>
         </div>
       </div>
     </nav>
@@ -60,7 +63,7 @@
             <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
             <p class="text-gray-300">Phone: <a href="tel:07807613063" class="hover:text-white">07807 613063</a></p>
             <p class="text-gray-300">Email: info@longfieldflooring.com</p>
-            <p class="text-gray-300">Address: 123 Floor Street, City, State 12345</p>
+            <p class="text-gray-300">Address: High Halstow, Kent</p>
           </div>
           <div>
             <h3 class="text-lg font-semibold mb-4">Business Hours</h3>
