@@ -54,7 +54,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 class="text-lg font-semibold mb-4">Longfield Flooring</h3>
-            <p class="text-gray-300">Professional flooring services for your home and business.</p>
+            <p class="text-gray-300">Trusted flooring contractor serving the entire Kent area. Services for both residential and commercial properties.</p>
           </div>
           <div>
             <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
