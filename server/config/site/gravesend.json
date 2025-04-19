@@ -1,0 +1,30 @@
+{
+  "name": "Gravesend Electrical Solutions",
+  "location": "Gravesend",
+  "county": "Kent",
+  "contact": {
+    "phone": "07807 613063",
+    "email": "info@gravesendelectricalsolutions.com",
+    "address": "Gravesend, Kent"
+  },
+  "serviceAreas": [
+    "Gravesend",
+    "Northfleet",
+    "Swanscombe",
+    "Ebbsfleet",
+    "Meopham",
+    "Cobham",
+    "Shorne",
+    "Higham",
+    "Strood",
+    "Rochester",
+    "Chatham",
+    "Gillingham"
+  ],
+  "hours": [
+    "Monday - Friday: 7:00 AM - 5:00 PM",
+    "Saturday: 8:00 AM - 12:00 PMM",
+    "Sunday: Closed",
+    "Emergency Services: 24/7"
+  ]
+} 

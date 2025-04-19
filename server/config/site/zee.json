@@ -1,0 +1,30 @@
+{
+  "name": "Zee Electrical",
+  "location": "Maidstone",
+  "county": "Kent",
+  "contact": {
+    "phone": "01622 123456",
+    "email": "info@zeeelectrical.co.uk",
+    "address": "Maidstone, Kent"
+  },
+  "serviceAreas": [
+    "Maidstone",
+    "Bearsted",
+    "Lenham",
+    "Harrietsham",
+    "Sutton Valence",
+    "Headcorn",
+    "Coxheath",
+    "Loose",
+    "Barming",
+    "East Farleigh",
+    "West Farleigh",
+    "Yalding"
+  ],
+  "hours": [
+    "Monday - Friday: 7:00 AM - 5:00 PM",
+    "Saturday: 8:00 AM - 12:00 PM",
+    "Sunday: Closed",
+    "Emergency Services: 24/7"
+  ]
+} 
